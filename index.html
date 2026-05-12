@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rStoreMLBB</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-gamepad"></i>
+                rStore
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Paket</a></li>
+                <li><a href="#stats">Stats</a></li>
+            </ul>
+            <!-- Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#services"><i class="fas fa-box"></i> Paket</a></li>
+                <li><a href="#stats"><i class="fas fa-chart-line"></i> Stats</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1> Jasa Joki MLBB </h1>
+            <p>Epic → Mythic Glory | Winrate 90% | Garansi 100% | Jasa Joki Terpercaya #1</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/628155135065" class="cta-button cta-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Order Via WA
+                </a>
+                <a href="#" onclick="toggleChat()" class="cta-button cta-secondary">
+                    <i class="fas fa-robot"></i>
+                    Chat AI
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <h2 class="section-title">PAKET JOKI TERBAIK</h2>
+        <div class="services-grid">
+            <div class="service-card service-epic">
+                <div class="service-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <h3>Epic → Legend</h3>
+                <div class="price">Rp 175K</div>
+                <p>Upgrade rank dari Epic ke Legend<br><strong>Winrate 85%+</strong> | 2-3 Hari</p>
+            </div>
+            <div class="service-card service-legend">
+                <div class="service-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Legend → Mythic</h3>
+                <div class="price">Rp 200K</div>
+                <p>Joki fash track dari Legend ke Mythic<br><strong>Garansi + Free MMR</strong></p>
+            </div>
+            <div class="service-card service-mythic">
+                <div class="service-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Mythic → Honor </h3>
+                <div class="price">Rp 300K</div>
+                <p>Target Mythic Grading → Honor <br><strong> + MMR Boost Premium</strong></p>
+            </div>
+            <div class="service-card service-glory">
+                <div class="service-icon">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <h3>Honor → Mythic Glory</h3>
+                <div class="price">Rp 425K</div>
+                <p>Mythic Glory dengan grandmaster MMR<br><strong>Exclusive Service</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" id="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number" data-target="15K">0</span>
+                <p>Akun Berhasil</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="90">0</span>%
+                <p>Winrate</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="500">0</span>
+                <p>Pro Player</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="100">0</span>%
+                <p>GARANSI</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://wa.me/628155135065" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p>© 2026 <strong>JOKI rSTORE</strong> | #1 Joki Mobile Legends Indonesia</p>
+    </footer>
+
+    <!-- Chat Widget -->
+    <button class="chat-toggle" onclick="toggleChat()" id="chatToggle">
+        <i class="fas fa-robot"></i>
+        <div class="chat-badge">AI</div>
+    </button>
+
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <i class="fas fa-robot" style="font-size: 1.6rem; color: #00ff88;"></i>
+            <h3>JOKIBOT AI v2.0</h3>
+            <div class="chat-status">
+                <div class="status-dot"></div>
+                Online 24/7
+            </div>
+            <button class="close-chat" onclick="toggleChat()" title="Tutup">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-content">
+                    <strong>🚀 Selamat datang di JOKI ML rStore!</strong><br><br>
+                    Saya <strong>JOKIBOT AI</strong> siap bantu 24/7!<br>
+                    Winrate <strong>90%</strong> • Garansi <strong>100%</strong><br><br>
+                    <em>💬 Ketik: <code>harga</code> | <code>waktu</code> | <code>promo</code> | <code>pesan</code></em>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <textarea class="chat-input" id="chatInput" 
+                      placeholder="Tulis pesan... (harga, waktu, promo, pesan)" 
+                      rows="1"></textarea>
+            <button class="send-btn" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+                Kirim
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
